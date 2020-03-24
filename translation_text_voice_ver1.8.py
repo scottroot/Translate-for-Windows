@@ -92,7 +92,7 @@ def clicked(self):
     import os
     # Imports the Google Cloud client library
     from google.cloud import translate
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "C:/gcloud/gappcred.json"
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "" # your credentials, e.g. C:/gcloud/gappcred.json
 
     # Instantiates a client
     client = translate.Client()
@@ -132,10 +132,10 @@ window.bind('<Return>', clicked)
 
 
 def end_stt():
-    # mic_photo_off = PhotoImage(file = r"C:/Users/Scott Hendrix/Scott's Drive/Python Projects/Google Translate/mic-off-50.png")
+    # mic_photo_off = PhotoImage(file = r"images/Google Translate/mic-off-50.png")
     return
 def start_stt():
-    mic_photo_on = PhotoImage(file = r"C:/Users/Scott Hendrix/Scott's Drive/Python Projects/Google Translate/mic-on-50.png")
+    mic_photo_on = PhotoImage(file = r"images/mic-on-50.png")
     mic_on = Button(window, text="Mic", image=mic_photo_on, background="white", activebackground="white", border=0, command=end_stt)
     mic_on.place(x=900,y=148)
     # mic_off.grid()
@@ -289,7 +289,7 @@ def start_stt():
     # clicked()
     
 
-mic_photo_off = PhotoImage(file = r"C:/Users/Scott Hendrix/Scott's Drive/Python Projects/Google Translate/mic-off-50.png")
+mic_photo_off = PhotoImage(file = r"images/mic-off-50.png")
 mic_off = Button(window, text="Mic", image=mic_photo_off, background="white", activebackground="white", border=0, command=start_stt)
 # btn.grid(column=1, row=3)
 mic_off.place(x=900,y=148)
